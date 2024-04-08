@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detran</title>
+    <style>
+        img{
+            width: 100px;
+            margin-bottom: 30px;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sistemas de multas</h1>
+    <img src="adesivo-velocidade1.JPEG" alt="">
+    <div class="inputs">
+        Velocidade do carro: <input type="number" name="txtvel" id="txtvel">Km/h
+        <input type="button" value="Verificar" onclick="calcular()">
+        <div id="res"></div>
+    </div>
+    <script>
+        function calcular(){
+            var txtv = window.document.querySelector('input#txtvel')
+            var res = window.document.querySelector('div#res')
+            var vel = Number(txtv.value)
+            res.innerHTML = `<p>Sua velocidade atual é de <strong>${vel}Km/h</strong></p>`
+            if(vel>60) {
+                res.innerHTML = `<p>Essa velocidade está <strong>${vel-60}Km/h</strong> acima do permitido. Você foi multado em R$ ${(vel)*1.5},00, com perca de 5 pontos na carteira!</p>`
+            }
+            res.innerHTML += 'Não beba enquanto dirige, use o cinto de segurança e continue na velocidade estabelecida'
+        }
+    </script>
+</body>
+</html>
