@@ -4,7 +4,7 @@ function carregar(){
     var hr = document.getElementById('hr')
     var img = document.getElementById('img')
     var data = new Date()
-    var hora = 14/* data.getHours() */
+    var hora = data.getHours()
     var min = data.getMinutes()
     hr.innerHTML = `Agora são exatamente ${hora}:${min}`
     if(hora >= 0 && hora <=12){
