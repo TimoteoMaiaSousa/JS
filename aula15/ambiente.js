@@ -1,5 +1,5 @@
 let num = [4, 2, 5, 3, 1]
-num.push(6)
+num.push(6)//Adiciona um elemento no vetor
 console.log(`Nosso vetor tem ${num.length} elementos:`)
 console.log(`${num.sort()}`)
 let pos = num.indexOf(7) // Pesquisa um elemento do vetor no caso, 8.
