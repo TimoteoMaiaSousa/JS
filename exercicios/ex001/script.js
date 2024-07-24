@@ -1,4 +1,4 @@
- var user = prompt('Qual é o seu nome?')
+var user = prompt('Qual é o seu nome?')
 function carregar(){
     var msg = document.getElementById('msg')
     var hr = document.getElementById('hr')
